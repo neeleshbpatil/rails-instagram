@@ -30,7 +30,7 @@ class SessionsController < ApplicationController
   # Logout.
   def destroy
     session[:authenticated] = false
-    redirect_to root_url, :notice => "You have successfully logged out"
+    render :html => "sessions/destroy"
   end
 
   protected
